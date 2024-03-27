@@ -1,0 +1,293 @@
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; 防止滚动条出现 */
+  background-color: #f9f9f9;
+}
+.andro_header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   z-index: 2000;  /*  使导航栏处于最前方 */
+}
+.content{
+    height: 100%;
+background-color: #50BD4D;
+padding-top: 60px;
+}
+.m_foot{
+    margin-top: 100px;
+}
+.copyright,.copyright a{
+    color: #fff;
+    margin: 0 auto;
+}
+.m_foot .andro_footer-bottom .container .m_copyright{
+    justify-content: center;
+}
+.andro_header-middle{
+    padding: 0 2em;
+}
+
+.nav_extend >div{
+    
+    width: 400px;
+    padding: 20px 20px;
+    background-color: #fff;
+    border-color: rgba(228, 228, 228, 1);
+    box-shadow: 0 3px 24px rgba(0,0,0,.06);
+    position:absolute;
+ right: 0;
+ top: 70px;
+ z-index: 2000;
+ visibility: hidden;
+ opacity: 0;
+ transition: visibility 0s, opacity 0.3s ease; /* 添加过渡效果 */
+ }
+ 
+
+
+
+.nav_extend  ul li{
+   display: block;
+    padding: 0px 5px;   
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_extend .order ul li:nth-child(n+2){
+    border-top: 1px solid #e5e5e5;
+    color: black;
+   padding-top: .5em;
+}
+
+.nav_extend  .account ul li:nth-child(n+2){
+   color: black;
+   padding: 5px;
+ }
+.nav_extend  .account ul li:nth-child(1){
+    border-bottom: 1px solid #e5e5e5;
+   padding-bottom: .5em;
+ }
+
+ .menus{
+    width: 230px;
+height: 100%;
+padding: 5px;
+overflow: hidden ;
+    position: fixed;
+    top:70px ;
+    left: 0;
+    background-color: #50BD4D;
+    border:2px solid #449e41;
+    box-shadow: 0 3px 24px rgba(0,0,0,.06);
+ }
+ .menus a{
+    color: #fff;
+ }
+ .menus-list .menus-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 1px 0 1px 1px;
+    font-size: 15px;
+    
+}
+
+.menus-submenu .menus-list {
+    height: 0;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    transition: transform .4s;
+    visibility: hidden;
+}
+.menus-submenu.expanded-list,.menus-list li:hover{
+    background-color:#449e41;
+}
+
+
+.menus-list .menus-item img {
+    width: 25px;
+    height: 25px;
+}
+.menus-list .menus-item .menus-text {
+    padding: 8px;
+}
+.menus-list .menus-item .iconshang, .menus-list .menus-item .iconxia {
+    margin-left: auto;
+    margin-right: 6px;
+}
+
+
+/* 展开子列表 */
+.menus-submenu .expanded-list li:hover {
+    background-color: #4cca48;
+   
+}
+.menus-submenu.expanded-list .menus-list {
+    height: 100%;
+    visibility: visible;
+    /* 90deg 变为 0deg 相当于垂直平面变为平行于平面 */
+    transform: rotateX(0deg);
+}
+.bigcontent{
+    position: absolute;
+    /* background-color: pink;  */
+    height: 100%;
+    /* margin-top: 50px; */
+    top: 70px;
+    width: 1370px;
+left: 230px;
+box-sizing: border-box;
+overflow-y: scroll;
+
+}
+.bigcontent .content_header{
+    padding: 15px 0;
+    width: 100%;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #e4e4e4;
+    
+}
+.bigcontent .content_header span{
+    border-left:10px solid #4cca48;
+    padding-left: 10px;
+}
+.pic_show{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.pic_show .showcard{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.showcard i {
+    color: #4cca48;
+    margin-left: 5px;
+    margin-right: 30px; /* 可以调整图标和文字之间的间距 */
+}
+.diagram{
+    
+        position: relative;
+        margin-bottom: 30px;
+        border: 1px solid #F0F2F3;
+        background-color: #fff;
+        border-radius: 8px;
+        z-index: 1;
+        box-shadow: 0 3px 24px rgba(0,0,0,.04);
+        transition: .3s;
+    
+}
+.diagram_header{
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    background-color: rgba(80, 189, 77,0.6);
+    font-weight: bold;
+    
+}
+.diagram_content{
+    padding: 20px;
+    /* display: flex;
+    justify-content: space-between; */
+}
+.diagram_content .uls ul li{
+    display: block;
+    padding: 0px 10px 10px;   
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+}
+.diagram_content .uls ul li span a{
+color: #4cca48;
+}
+.twodiagram{
+    display: flex;
+    justify-content: space-between;
+}
+.datas ul{
+    display: flex;
+    justify-content: space-between;
+}
+.datas ul li{
+    text-align: center;
+    margin: 20px 28px;
+}
+.datas ul li h3{
+    color: #4cca48;
+}
+.content_footer{
+    margin: 20px 0;
+    height: 200px;
+}
+.content_footer .container{
+    text-align: center;
+    padding-top: 100px;
+}
+.btnlist{
+    margin: 20px 0;
+}
+.btnlist ul{
+    display: flex;
+    justify-content: flex-start;
+
+}
+.btnlist ul li{
+    margin: 0 10px;
+}
+.searchbox{
+    display: flex;
+    justify-content: space-between;
+}
+.comsearch{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: large;
+}
+.input-group{
+    width: 200px;
+}
+thead{
+    background-color: rgba(80, 189, 77,0.6);
+}
+td{
+    border-bottom: 1px solid #dee2e6;
+}
+.table-bordered>:not(caption)>*>*{
+    border-width: 1px 1px;
+}
+table th, td {
+   
+    vertical-align: middle !important;/* 垂直居中 */
+}
+.table_title{
+    /* background-color:#f9fafc !important; */
+    width: 30%;
+}
+.businesstable td{
+    border: 1px solid black;
+}
+.table-secondary{
+    background-color: #f9fafc;
+}
+.system td{
+    padding-left: 20px;
+}
+.system tr td:nth-child(odd){
+    width: 20%;
+}
+
+.system tr td:nth-child(even){
+    width: 30%;
+}
